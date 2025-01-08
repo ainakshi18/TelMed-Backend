@@ -17,9 +17,21 @@ public class Patient {
     private String phone;
     private String email;
     private List<String> medicalHistory; // List of Consultation IDs
+    private List<String> Consultation;
     private String currentConsultationId;
+    private String role;
+    private List<String> request;
+    private List<String> order;
+    private List<String> appointments;
+    public List<String> getAppointments() {
+		return appointments;
+	}
 
-    // Getters and Setters
+	public void setAppointments(List<String> appointments) {
+		this.appointments = appointments;
+	}
+
+	// Getters and Setters
     public String getId() {
 		return id;
 	}
@@ -94,7 +106,45 @@ public class Patient {
 
 
 
-    public static class Address {
+    public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public List<String> getConsultation() {
+		return Consultation;
+	}
+
+	public void setConsultation(List<String> consultation) {
+		Consultation = consultation;
+	}
+
+
+
+	public List<String> getRequest() {
+		return request;
+	}
+
+	public void setRequest(List<String> request) {
+		this.request = request;
+	}
+
+
+
+	public List<String> getOrder() {
+		return order;
+	}
+
+	public void setOrder(List<String> order) {
+		this.order = order;
+	}
+
+
+
+	public static class Address {
 		private String city;
         private String state;
         private String pincode;

@@ -15,6 +15,14 @@ public class Doctor {
     private String email;
     private List<String> availability; // List of available time slots
     private List<String> consultations; // List of Consultation IDs
+    private List<String> appointments;
+    private String imageUrl;
+private String rating;
+
+private String qualifications;
+private String hospitalName;
+private String gender;
+private String signUrl;
 
     // Getters and Setters
     public String getId() {
@@ -58,6 +66,48 @@ public class Doctor {
 	}
 	public void setConsultations(List<String> consultations) {
 		this.consultations = consultations;
+	}
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	public String getRating() {
+		return rating;
+	}
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+	public String getQualifications() {
+		return qualifications;
+	}
+	public void setQualifications(String qualifications) {
+		this.qualifications = qualifications;
+	}
+	public String getHospitalName() {
+		return hospitalName;
+	}
+	public void setHospitalName(String hospitalName) {
+		this.hospitalName = hospitalName;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public List<String> getAppointments() {
+		return appointments;
+	}
+	public void setAppointments(List<String> appointments) {
+		this.appointments = appointments;
+	}
+	public String getSignUrl() {
+		return signUrl;
+	}
+	public void setSignUrl(String signUrl) {
+		this.signUrl = signUrl;
 	}
 
 }

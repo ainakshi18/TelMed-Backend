@@ -15,7 +15,10 @@ public class MedicalStore {
     private String email;
     private List<Medicine> availableMedicines; // List of medicines with quantities
     private List<String> prescriptions; // List of Prescription IDs
+private String ImageUrl;
+private List<String> request; 
 
+private List<String> order; 
     // Getters and Setters
     public String getId() {
 		return id;
@@ -74,32 +77,52 @@ public class MedicalStore {
 	}
 
 
-    public static class Address {
-		private String city;
-        private String state;
-        private String pincode;
+	public String getImageUrl() {
+		return ImageUrl;
+	}
 
-        // Getters and Setters
-        public String getCity() {
-			return city;
-		}
-		public void setCity(String city) {
-			this.city = city;
-		}
-		public String getState() {
-			return state;
-		}
-		public void setState(String state) {
-			this.state = state;
-		}
-		public String getPincode() {
-			return pincode;
-		}
-		public void setPincode(String pincode) {
-			this.pincode = pincode;
-		}
+	public void setImageUrl(String imageUrl) {
+		ImageUrl = imageUrl;
+	}
+	public List<String> getRequest() {
+		return request;
+	}
 
-    }
+	public void setRequest(List<String> request) {
+		this.request = request;
+	}
+
+	public List<String> getOrder() {
+		return order;
+	}
+
+	public void setOrder(List<String> order) {
+		this.order = order;
+	}
+
+
+
+
+	public class Address {
+	    private String street;
+	    private String city;
+	    private String state;
+	    private String zipCode;
+	    
+	    // Getters and Setters
+	    public String getStreet() { return street; }
+	    public void setStreet(String street) { this.street = street; }
+	    
+	    public String getCity() { return city; }
+	    public void setCity(String city) { this.city = city; }
+	    
+	    public String getState() { return state; }
+	    public void setState(String state) { this.state = state; }
+	    
+	    public String getZipCode() { return zipCode; }
+	    public void setZipCode(String zipCode) { this.zipCode = zipCode; }
+	}
+
 
 }
 

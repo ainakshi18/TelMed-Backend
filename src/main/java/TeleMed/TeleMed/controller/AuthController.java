@@ -52,7 +52,7 @@ public class AuthController {
 
         // Assign role based on input (default: PATIENT)
         if (user.getUserRole() == null) {
-            user.setUserRole(UserRole.PATIENT); // Default role
+            user.setUserRole(UserRole.ROLE_PATIENT); // Default role
         }
 
         // Save the user to the database

@@ -9,11 +9,11 @@ import java.util.List;
 public class Prescription {
     @Id
     private String id;
-
 	private String consultationId;
     private List<Medicine> medicines;
     private String status; // e.g., "Pending", "Fulfilled"
     private String storeId;
+    private String notes;
 
     // Getters and Setters
     public String getId() {
@@ -57,7 +57,16 @@ public class Prescription {
 	}
 
 
-    public static class Medicine {
+    public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+
+	public static class Medicine {
     	private String name;
         private int quantity;
         private String dosage;

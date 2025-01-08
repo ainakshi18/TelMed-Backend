@@ -90,6 +90,9 @@ public class JwtUtil {
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);  // Extract username from the "subject" claim
     }
+    public String extractName(String token) {
+        return extractClaims(token).get("name", String.class); // Extract name from custom claim "name"
+    }
 
     /**
      * Extract a specific claim from the JWT token.

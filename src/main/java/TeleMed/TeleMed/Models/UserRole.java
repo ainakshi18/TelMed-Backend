@@ -1,9 +1,9 @@
 package TeleMed.TeleMed.Models;
 
 public enum UserRole {
-    USER,
-    ADMIN,
-    DOCTOR,
-    PATIENT,
-    PHARMACIST
+	ROLE_USER,
+    ROLE_ADMIN,
+    ROLE_DOCTOR,
+    ROLE_PATIENT,
+    ROLE_PHARMACIST
 }

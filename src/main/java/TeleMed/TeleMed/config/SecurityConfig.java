@@ -54,10 +54,20 @@ public class SecurityConfig {
             .cors().and() // Enable CORS
             .authorizeRequests()
             .requestMatchers("/api/auth/**").permitAll() // Public endpoints
-            .requestMatchers("/api/patient/**").hasAuthority("PATIENT")
-            .requestMatchers("/api/doctor/**").hasAuthority("DOCTOR")
-            .requestMatchers("/api/store/**").hasAuthority("STORE")
-            .requestMatchers("/register", "/login").permitAll()
+            .requestMatchers("/api/patient/**").authenticated() 
+            .requestMatchers("/api/doctor/**").authenticated() 
+            .requestMatchers("/api/order/**").authenticated()  
+            .requestMatchers("/api/medicine-request/**").authenticated() 
+            .requestMatchers("/api/medicines/**").authenticated() 
+            .requestMatchers("/api/appointments/**").authenticated() 
+            .requestMatchers("/api/prescriptions/**").authenticated() 
+            .requestMatchers("/api/consultation**").authenticated() 
+            .requestMatchers("/api/medicalstore/**").hasAnyRole("PATIENT", "DOCTOR", "PHARMACIST")
+//
+//            .requestMatchers("/api/medicalstore/**").authenticated() 
+//            .requestMatchers("/api/medicalstore/**").authenticated() 
+//            .requestMatchers("/api/medicalstore/all","/api/medicalstore/{id}").authenticated()
+            .requestMatchers("/signup", "/login").permitAll() // Public endpoints
             .anyRequest().authenticated() // Protect all other endpoints
             .and()
             .sessionManagement()
@@ -70,6 +80,7 @@ public class SecurityConfig {
     }
 
 
+  
 
     @Bean
     public PasswordEncoder passwordEncoder() {
